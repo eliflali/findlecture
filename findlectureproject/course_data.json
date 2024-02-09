@@ -1,0 +1,1484 @@
+[
+    [
+        [
+            "Course Code",
+            "Course Name",
+            "METU Credit",
+            "Contact (h/w)",
+            "Lab (h/w)",
+            "ECTS"
+        ],
+        [
+            "EE100",
+            "INTRODUCTION TO ELECTRICAL ENGINEERING",
+            "0",
+            "1",
+            "0",
+            "1.0"
+        ],
+        [
+            "EE101",
+            "INTRODUCTION TO ELECTRICAL AND ELECTRONICS ENGINEERING",
+            "2",
+            "1",
+            "2",
+            "3.0"
+        ],
+        [
+            "EE201",
+            "CIRCUIT THEORY I",
+            "4",
+            "4",
+            "0",
+            "6.0"
+        ],
+        [
+            "EE202",
+            "CIRCUIT THEORY II",
+            "4",
+            "4",
+            "0",
+            "6.0"
+        ],
+        [
+            "EE209",
+            "FUNDAMENTALS OF ELECTRICAL&ELECTRO. EN",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE212",
+            "SEMICONDUCTOR DEVICES& MODELING",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE213",
+            "ELECTRICAL CIRCUITS LABORATORY",
+            "2",
+            "0",
+            "4",
+            "3.0"
+        ],
+        [
+            "EE214",
+            "ELECTRONIC CIRCUITS LABORATORY",
+            "2",
+            "0",
+            "4",
+            "3.0"
+        ],
+        [
+            "EE224",
+            "ELECTROMAGNETIC THEORY",
+            "4",
+            "4",
+            "0",
+            "6.0"
+        ],
+        [
+            "EE230",
+            "PROBABILITY AND RANDOM VARIABLES",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE281",
+            "ELECTRICAL CIRCUITS",
+            "4",
+            "3",
+            "2",
+            "6.0"
+        ],
+        [
+            "EE282",
+            "INTRODUCTION TO DIGITAL ELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE300",
+            "SUMMER PRACTICE I",
+            "0",
+            "0",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE301",
+            "SIGNALS AND SYSTEMS I",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE302",
+            "FEEDBACK SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE303",
+            "ELECTROMAGNETIC WAVES",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE306",
+            "SIGNALS AND SYSTEMS II",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE309",
+            "FUNDAMENTALS OF ELECTRICAL ENG.",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE310",
+            "FUNDAMENTALS OF ELECTRONICS ENG.",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE311",
+            "ANALOG ELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE312",
+            "DIGITAL ELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE313",
+            "ANALOG ELECTRONICS LABORATORY",
+            "2",
+            "0",
+            "4",
+            "3.0"
+        ],
+        [
+            "EE314",
+            "DIGITAL CIRCUITS LABORATORY",
+            "2",
+            "0",
+            "4",
+            "3.0"
+        ],
+        [
+            "EE348",
+            "INTRODUCTION TO LOGIC DESIGN",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE361",
+            "ELECTROMECHANICAL ENERGY CONVERSION I",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE362",
+            "ELECTROMECHANICAL ENERGY CONVERSION II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE374",
+            "FUNDAMENTALS OF POWER SYSTEMS AND ELECTRICAL EQUIPMENT",
+            "3",
+            "3",
+            "0",
+            "7.0"
+        ],
+        [
+            "EE381",
+            "SYSTEMS AND CONTROL",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE400",
+            "SUMMER PRACTICE II",
+            "0",
+            "0",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE402",
+            "DISCRETE TIME SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE404",
+            "NONLINEAR CONTROL SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE406",
+            "LABORATORY OF FEEDBACK CONTROL SYSTEMS",
+            "3",
+            "1",
+            "4",
+            "6.0"
+        ],
+        [
+            "EE407",
+            "PROCESS CONTROL",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE408",
+            "PROCESS INSTRUMENTATION AND CONTROL",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE412",
+            "NONLINEAR ELECTRONICS FOR COMMUNICA.",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE413",
+            "INTRODUCTION TO VLSI DESIGN",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE414",
+            "INTRODUCTION TO ANALOG INTEGRATED CIRCUITS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE415",
+            "INTRODUCTION TO MEDICAL IMAGING",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE416",
+            "BIOMEDICAL SIGNALS, INSTRUMENTATION AND MEASUREMENT",
+            "4",
+            "3",
+            "2",
+            "6.0"
+        ],
+        [
+            "EE419",
+            "SOLID STATE DEVICES",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE426",
+            "ANTENNAS AND PROPAGATION",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE427",
+            "MICROWAVES I",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE428",
+            "MICROWAVES II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE430",
+            "DIGITAL SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE433",
+            "REAL-TIME APPLICATIONS OF DIGITAL SIGNAL PROCESSING",
+            "3",
+            "1",
+            "4",
+            "6.0"
+        ],
+        [
+            "EE435",
+            "COMMUNICATIONS I",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE436",
+            "COMMUNICATIONS II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE438",
+            "OPTICAL COMMUNICATION SYSTEMS",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE441",
+            "DATA STRUCTURES",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE442",
+            "OPERATING SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE443",
+            "NUMERICAL METHODS AND INTRODUCTION TO OPTIMIZATION",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE444",
+            "INTRODUCTION TO COMPUTER NETWORKS",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE445",
+            "COMPUTER ARCHITECTURE I",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE446",
+            "COMPUTER ARCHITECTURE II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE447",
+            "INTRODUCTION TO MICROPROCESSORS",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE449",
+            "COMPUTATIONAL INTELLIGENCE",
+            "3",
+            "3",
+            "0",
+            "7.0"
+        ],
+        [
+            "EE462",
+            "UTILIZATION OF ELECTRICAL ENERGY",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE463",
+            "STATIC POWER CONVERSION I",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE464",
+            "STATIC POWER CONVERSION II",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE471",
+            "POWER SYSTEM ANALYSIS I",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE472",
+            "POWER SYSTEM ANALYSIS II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE474",
+            "DISTRIBUTION SYSTEMS AND SMART GRID",
+            "3",
+            "3",
+            "0",
+            "7.0"
+        ],
+        [
+            "EE475",
+            "HIGH VOLTAGE TECHNIQUES I",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE476",
+            "HIGH VOLTAGE TECHNIQUES II",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE478",
+            "POWER SYSTEM PROTECTION",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE493",
+            "ENGINEERING DESIGN I",
+            "3",
+            "2",
+            "2",
+            "6.0"
+        ],
+        [
+            "EE494",
+            "ENGINEERING DESIGN II",
+            "3",
+            "2",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE495",
+            "FUNDAMENTALS OF PHOTONICS",
+            "4",
+            "3",
+            "2",
+            "7.0"
+        ],
+        [
+            "EE496",
+            "SPECIAL TOPICS: INTRODUCTION TO COMPUTATIONAL INTELLIGENCE",
+            "3",
+            "3",
+            "0",
+            "7.0"
+        ],
+        [
+            "EE498",
+            "SPECIAL TOPICS : CONTROL SYSTEM DESIGN AND SIMULATION",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE499",
+            "SPECIAL TOPICS : VECTOR SPACE METHODS IN SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "5.0"
+        ],
+        [
+            "EE500",
+            "M.S. THESIS",
+            "0",
+            "0",
+            "0",
+            "50.0"
+        ],
+        [
+            "EE501",
+            "LINEAR SYSTEMS THEORY I",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE502",
+            "LINEAR SYSTEMS THEORY II",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE503",
+            "STATISTICAL SIGNAL PROCESSING AND MODELING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE504",
+            "ADAPTIVE SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE505",
+            "MULTIRESOLUTION SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE509",
+            "HIGH FREQUENCY FILTER DESIGN",
+            "3",
+            "2",
+            "2",
+            "8.0"
+        ],
+        [
+            "EE510",
+            "ANALOG INTEGRATED CIRCUITS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE511",
+            "COMMUNICATION ELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE512",
+            "INTRO. TO OPTICAL FIBER COMMUNICATIONS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE513",
+            "TRANSPORT PHENOMENA IN SEMICOND. DEVICES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE514",
+            "INFRARED DEVICES AND SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE515",
+            "BIOELECTRICITY AND BIOMAGNETISM",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE516",
+            "BIOMEMS AND BIOSENSORS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE517",
+            "THERAPEUTIC&PROSTHETIC DEV. IN BIOMED.EN",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE518",
+            "PHYSIOLOGICAL CONTROL SYSTEMS ANALYSIS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE519",
+            "MEDICAL IMAGING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE521",
+            "ANALYTICAL METHODS FOR ELECTROMAGNETICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE522",
+            "NUMERICAL METHODS FOR ELECTROMAGNETICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE523",
+            "ELECTROMAGNETIC WAVE THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE524",
+            "ELECTROMAGNETIC WAVE PROPAGATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE525",
+            "ANTENNA ENGINEERING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE526",
+            "ANTENNA THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE527",
+            "MICROWAVE ENGINEERING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE528",
+            "MICROWAVE THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE529",
+            "SPECIAL TOPICS IN ELEC.ENG.",
+            "3",
+            "0",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE531",
+            "PROBABILITY AND STOCHASTIC PROCESSES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE532",
+            "COMMUNICATION NETWORK ANALYSIS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE533",
+            "INFORMATION THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE534",
+            "CODING THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE535",
+            "COMMUNICATION THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE536",
+            "DIGITAL COMMUNICATION SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE538",
+            "TELECOMMUNICATION NETWORKS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE541",
+            "COMPUTER SYSTEMS",
+            "3",
+            "0",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE542",
+            "COMPUTER NETWORKS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE543",
+            "NEUROCOMPUTERS AND DEEP LEARNING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE544",
+            "ALGORITHMS AND COMPUTATIONAL COMPLEXITY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE545",
+            "SWITCHING AND AUTOMATA THEORY I",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE546",
+            "SWITCHING AND AUTOMATA THEORY II",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE553",
+            "OPTIMIZATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE554",
+            "OPTIMAL CONTROL THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE555",
+            "STABILITY THEORY OF DYNAMICAL SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE557",
+            "ESTIMATION THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE558",
+            "SYSTEM IDENTIFICATION & ADAPTIVE CONTROL",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE559",
+            "INTELLIGENT CONTROL",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE561",
+            "ADVANCED STATIC POWER CONVERSION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE563",
+            "GENERALIZED ELECTRICAL MACHINE THEORY",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE564",
+            "DESIGN OF ELECTRICAL MACHINES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE565",
+            "VECTOR CONTROL OF ELECTRICAL DRIVES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE568",
+            "SELECTED TOPICS ON ELECTRICAL MACHINES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE569",
+            "SPECIAL TOPICS IN POWER ELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE571",
+            "WAVE PROPAGATION IN POWER SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE573",
+            "POWER SYSTEM STABILITY AND DYNAMICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE574",
+            "POWER SYS.REAL-TIME MONITORING & CONTROL",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE575",
+            "ADVANCED HIGH VOLTAGE TECHNIQUES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE576",
+            "HIGH VOLTAGE MEASUREMENT TECHNIQUES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE578",
+            "POWER SYSTEM PLANNING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE579",
+            "ECONOMIC OPERATION OF POWER SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE583",
+            "PATTERN RECOGNITION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE584",
+            "MACHINE VISION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE585",
+            "PROBABILISTIC ROBOTICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE586",
+            "ARTIFICIAL INTELLIGENCE",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE587",
+            "INTRODUCTION TO ROBOTICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE588",
+            "ROBOT HAND: DYNAMICS OF MANIPULATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE590",
+            "SEMINAR",
+            "0",
+            "0",
+            "2",
+            "10.0"
+        ],
+        [
+            "EE595",
+            "RESEARCH METHODS AND ETHICAL ISSUES IN ELECTRICAL AND ELECTRONICS ENGINEERING",
+            "0",
+            "0",
+            "0",
+            "6.0"
+        ],
+        [
+            "EE600",
+            "PH.D. THESIS",
+            "0",
+            "0",
+            "0",
+            "130.0"
+        ],
+        [
+            "EE601",
+            "FUNC. ANALYSIS&OPERATOR THEORY WITH APP.",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE603",
+            "SPECTRAL ESTIMATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE604",
+            "SENSOR ARRAY SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE610",
+            "INTEGRATED SENSORS AND SENSOR SYSTEM",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE611",
+            "PLASMA ENGINEERING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE614",
+            "PRINCIPLES OF LASER ENGINEERING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE615",
+            "OPTOELECTRONICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE617",
+            "PRINCIPLES OF ANALOG VLSI DESIGN",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE618",
+            "PRINCIPLES OF DIGITAL CMOS VLSI DESIGN",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE619",
+            "HIGH SPEED SEMICON. DEVICES AND CIRCUITS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE625",
+            "FUNDAMENTALS OF RADAR SYSTEMS I",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE626",
+            "FUNDAMENTALS OF RADAR SYSTEMS II",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE627",
+            "PRINCIPLES OF MODERN OPTICAL SYSTEM",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE633",
+            "DIGITAL SPEECH PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE634",
+            "DIGITAL IMAGE PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE635",
+            "FOURIER OPTICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE636",
+            "DIGITAL VIDEO PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE637",
+            "DIGITAL RADIO COMMUNICATIONS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE642",
+            "INTRO. TO MATH. BASES OF COMP. GRAPHICS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE644",
+            "MULTIMEDIA AND WIRELESS DATA NETWORKS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE647",
+            "MICROPROCESSOR SYSTEMS ENGINEERING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE674",
+            "COMPUTATION.TECH. IN POWER SYS. ANALYSIS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE690",
+            "GRADUATE SEMINARS",
+            "0",
+            "0",
+            "2",
+            "10.0"
+        ],
+        [
+            "EE703",
+            "ADVANCED DATA STRUCTURES AND ALGORITHMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE705",
+            "SPECTRAL ESTIMATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE706",
+            "DIGITAL VIDEO PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE707",
+            "INTODUCTION TO ELECTROMAGNETIC COM.",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE708",
+            "COMMUNICATION NETWORK ANALYSIS AND TELETRAFFIC ENG",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE710",
+            "ELECTRICITY TRADING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE722",
+            "SPECIAL TOPICS IN CMOS TECHNOLOGIES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE728",
+            "WIRELESS COMMUNICATIONS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE746",
+            "RADAR SIGNAL PROCESSING TECHNIQUES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE769",
+            "SENSOR ARRAY SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE783",
+            "PULSED POWER MICROWAVE SYSTEMS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE786",
+            "ELECTRICAL POWER QUALITY, MONITORING AND IMPROVEMENT",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE793",
+            "TARGET TRACKING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE798",
+            "THEORY OF REMOTE IMAGE FORMATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE799",
+            "ORIENTATION GRADUATE SEMINARS",
+            "0",
+            "0",
+            "2",
+            "70.0"
+        ],
+        [
+            "EE5290",
+            "MICROWAVE CIRCUIT DESIGN",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE5410",
+            "HIGH-SPEED AND EMBEDDED COMPUTER NETWORKING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE5420",
+            "MACHINE LEARNING BY PROBABILISTIC MODELS",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE5506",
+            "ADVANCED STATISTICAL SIGNAL PROCESSING",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE7074",
+            "ADVANCED TOPICS IN POWER SYSTEM STATE ESTIMATION",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE7551",
+            "DISCRETE EVENT SYSTEMS: MODELING AND CONTROL",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE7566",
+            "ELECTRIC DRIVES IN ELECTRIC AND HYBRID ELECTRIC VEHICLES",
+            "3",
+            "3",
+            "0",
+            "8.0"
+        ],
+        [
+            "EE7999",
+            "INTERNATIONAL GRADUATE STUDENT PRACTICE",
+            "0",
+            "0",
+            "0",
+            "2.0"
+        ]
+    ]
+]
