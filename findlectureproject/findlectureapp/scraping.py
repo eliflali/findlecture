@@ -26,7 +26,6 @@ def get_course_names():
 
     # First request to get cookies
     url = 'https://oibs.metu.edu.tr/cgi-bin/View_Program_Details_58/View_Program_Details_58.cgi'
-    #url = 'https://oibs2.metu.edu.tr/View_Program_Course_Details_64/main.php'
     vars = {'SubmitName': 'Submit', 'SaFormName': 'action_index__Findex_html'}
     response = session.post(url, data=vars)
     manage_cookies(session, save=True)

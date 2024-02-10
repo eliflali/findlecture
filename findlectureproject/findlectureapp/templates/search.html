@@ -4,44 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #d32f2f;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+        form {
+            margin-bottom: 40px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: calc(100% - 120px);
+            font-family: 'Open Sans', sans-serif;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
         .btn {
             display: inline-block;
-            background-color: #007bff;
+            background-color: #e57373;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 15px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #c62828;
+        }
+        p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Search for Courses</h1>
-    <!-- Search Form -->
-    <form action="{% url 'search_courses' %}" method="get">
-        <label for="query">Search:</label>
-        <input type="text" id="query" name="query" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <h1>Search for Courses</h1>
+        <!-- Search Form -->
+        <form action="{% url 'search_courses' %}" method="get">
+            <input type="text" id="query" name="query" placeholder="Enter course name or keyword" required>
+            <button type="submit">Search</button>
+        </form>
 
-    {% if courses %}
-        <h2>Search Results</h2>
-        <ul>
-            {% for course in courses %}
-                <li>
-                    <h3>{{ course.course_name }}</h3>
-                    <p>{{ course.course_contents }}</p>
-                    <!-- Button to view course -->
-                <a href="{{ course.course_link }}" class="btn" target="_blank">View Course</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% elif query %}
-        <p>No results found for "{{ query }}".</p>
-    {% endif %}
+        {% if courses %}
+            <h2>Search Results</h2>
+            <ul>
+                {% for course in courses %}
+                    <li>
+                        <h3>{{ course.course_name }}</h3>
+                        <p>{{ course.course_contents }}</p>
+                        <!-- Button to view course -->
+                        <a href="{{ course.course_link }}" class="btn" target="_blank">View Course</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elif query %}
+            <p>No results found for "{{ query }}".</p>
+        {% endif %}
+    </div>
 </body>
 </html>

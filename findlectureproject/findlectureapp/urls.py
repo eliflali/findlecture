@@ -5,5 +5,5 @@ from .views import search_courses
 
 urlpatterns = [
     path('scrape/', scrape_view, name='scrape'),
-    path('search_courses/', search_courses, name='search_courses'),
+    path('', search_courses, name='search_courses'),
 ]
