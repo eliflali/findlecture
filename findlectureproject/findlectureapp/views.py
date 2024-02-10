@@ -10,75 +10,69 @@ from .scraping import remove_cookies, python_request_with_vars
 import requests
 from bs4 import BeautifulSoup
 import os
-
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+from findlectureapp.models import Course
 """
-def scrape_courses(request):
-    url = "https://oibs2.metu.edu.tr/View_Program_Course_Details_64/main.php"
-    vars = {'SubmitName':'Submit','SaFormName':'action_index__Findex_html'}
-    # Initial GET request to fetch form options (if needed)
-    initial_response = python_request_with_vars(url, vars)
-    initial_soup = BeautifulSoup(initial_response, 'html.parser')
-    
-    # Proceed only if the department is found
-    #if selected_department_value:
-    
-    vars ={
-    'select_dept' : '874',
-    'select_semester' : '20183',
-    "submit_CourseList": "Submit",
-    "textWithoutThesis": "1",
-    "hidden_redir": "Login"
-    } 
-    
+def search_courses(request):
+    query = request.GET.get('query', '')
 
-    remove_cookies()
+    if query:
+        # Load the precomputed vectorizer and TF-IDF matrix
+        with open('vectorizer.pkl', 'rb') as f:
+            vectorizer = pickle.load(f)
+        with open('tfidf_matrix.pkl', 'rb') as f:
+            tfidf_matrix = pickle.load(f)
 
-    raw_data = python_request_with_vars(url, vars)
+        # Vectorize the query
+        query_vector = vectorizer.transform([query])
 
-    print(raw_data)
+        # Calculate similarity scores
+        similarity_scores = cosine_similarity(query_vector, tfidf_matrix)
 
-    if "Information about the department could not be found." in raw_data:
-        
-        context = {"error": "Information about the department could not be found."}
+        # Find the most similar courses
+        most_similar_indices = np.argsort(similarity_scores[0])[::-1]
+        top_indices = most_similar_indices[:10]  # Adjust the number of results as needed
+
+        # Fetch the corresponding course objects
+        course_ids = [Course.objects.all()[index].id for index in top_indices]
+        courses = Course.objects.filter(id__in=course_ids)
     else:
-        # Pass the raw HTML response to the template
-        context = {"raw_html": raw_data}
+        courses = []
 
-
-    return render(request, 'courses.html', context)
+    return render(request, 'search.html', {'courses': courses, 'query': query})
 """
-"""
-def scrape_courses(request):
-    url = "https://oibs2.metu.edu.tr/View_Program_Course_Details_64/main.php"
+def search_courses(request):
+    query = request.GET.get('query', '')
 
-    # Assuming you want to start with a clean session each time
-    with requests.Session() as session:
-        # If you need to fetch initial form options, you can do so here
-        # For simplicity, this step is skipped as it seems you already know the form data to submit
+    if query:
+        # Load the precomputed vectorizer and TF-IDF matrix
+        with open('vectorizer.pkl', 'rb') as f:
+            vectorizer = pickle.load(f)
+        with open('tfidf_matrix.pkl', 'rb') as f:
+            tfidf_matrix = pickle.load(f)
 
-        # Form data to submit
-        form_data = {
-            'select_dept': '874',  # Example department
-            'select_semester': '20183',  # Example semester
-            'submit_CourseList': 'Submit',
-            'textWithoutThesis': '1',
-            'hidden_redir': 'Login'  # Assuming this is needed based on your initial code
-        }
+        # Vectorize the query
+        query_vector = vectorizer.transform([query])
 
-        # Submit the form
-        response = session.post(url, data=form_data)
-        print(response.text)
-        # Check for specific error message in response
-        if "Information about the department could not be found." in response.text:
-            context = {"error": "Information about the department could not be found."}
-        else:
-            # If no error, pass the raw HTML response to the template
-            # You might want to parse the response with BeautifulSoup if you need to extract specific data
-            context = {"raw_html": response.text}
+        # Calculate similarity scores
+        similarity_scores = cosine_similarity(query_vector, tfidf_matrix)
 
-    return render(request, 'courses.html', context)
-"""
+        # Find the most similar courses
+        most_similar_indices = np.argsort(similarity_scores[0])[::-1]
+        top_indices = most_similar_indices[:10]  # Adjust the number of results as needed
 
+        # Assuming you have a way to map indices back to course IDs, fetch courses
+        # For demonstration, let's fetch all courses and then reorder them (not efficient for large datasets)
+        all_courses = list(Course.objects.all())
+        courses = [all_courses[i] for i in top_indices if i < len(all_courses)]
+    else:
+        courses = []
+
+    return render(request, 'search.html', {'courses': courses, 'query': query})
+    
 def scrape_courses(request):
     url = "https://catalog.metu.edu.tr/prog_courses.php?prog=567"
 

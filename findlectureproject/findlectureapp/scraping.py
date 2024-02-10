@@ -7,6 +7,7 @@ import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from .models import Course  # Adjust the import path as necessary
 
 # Function to remove cookies
 def remove_cookies():
@@ -138,11 +139,6 @@ def scrape_website():
     session = requests.Session()
     session.verify = False  # Similar to CURLOPT_SSL_VERIFYPEER in PHP
 
-    # First request to get cookies
-    #url = 'https://oibs.metu.edu.tr/cgi-bin/View_Program_Details_58/View_Program_Details_58.cgi'
-    #url = 'https://oibs2.metu.edu.tr/View_Program_Course_Details_64/main.php'
-    
-    # Get the course names
     department_data = get_course_names()
     departments = department_data["tables"][2]
 
@@ -166,6 +162,7 @@ def scrape_website():
                     row_data = [cell.get_text(strip=True) for cell in row.find_all(['td'])]
                     #print("row", row_data)
                     course_name = row_data[0]
+                    print(course_name)
                     course_code = department + '0'
                     course_link = "https://catalog.metu.edu.tr/"
                     a_tag = row.find('a')
@@ -175,12 +172,22 @@ def scrape_website():
 
                     
                     course_contents = get_course_contents(course_link, session)
-                    
+                    if course_contents is None or course_name == "Course Code":
+                        continue
+                    # Create and save the course object
+                    else:
+                        Course.objects.create(
+                            department=department,
+                            course_name=course_name,
+                            course_code=course_code,
+                            course_link=course_link,
+                            course_contents=course_contents
+                        )
+
                     row_data.append(course_contents)
 
                     table_data.append(row_data)
                 all_tables_data.append(table_data)
-                #all_tables_data.append(table_data)
                 # Write to a JSON file
                 with open('course_data.json', 'w', encoding='utf-8') as f:
                     json.dump(all_tables_data, f, ensure_ascii=False, indent=4)
