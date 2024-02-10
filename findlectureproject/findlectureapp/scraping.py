@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 import pickle
 import json
 import os
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 # Function to remove cookies
 def remove_cookies():
@@ -70,26 +73,66 @@ def get_course_names():
     tables = soup.find_all("table")
     
     data_table = tables[2]  # Adjust index based on your needs
-    #print(data_table)
     all_tables_data = []
     result_tables = {}
     for table in tables:
-        #print(table)
         table_data = {}
         rows = table.find_all('tr')
         i=0
         for row in rows:
             row_data = [cell.get_text(strip=True) for cell in row.find_all(['th', 'td'])]
-            #print("a",row_data)
             if(len(row_data )>2):
                 table_data[row_data[1]]=row_data[2:]
             i+=1
         all_tables_data.append(table_data)
-        #print(table_data[0])
 
     return {"tables": all_tables_data}
 
-    #return {"data": str(soup)}
+def similar_course_finder():
+    courses = [
+    ["CRP454", "URBAN TRANSPORT SYSTEMS: PLANNING AND DESIGN", "3", "3", "0", "5.0", "Planning and design of transport networks, modes, systems, stations. Network and urban form considerations. Route and capacity planning for public transport systems. Planning pedestrian circulation, principles of city center pedestrianisation. New Urbanism movement and planning for pedestrian-oriented and transit-oriented neighbourhoods. Principles of traffic calming. Design considerations for planning car parks, road junctions, stations, and interchange facilities."]
+    # Add more courses as needed
+    ]
+
+    # Extract descriptions
+    descriptions = [course[-1] for course in courses]
+
+    # Vectorize descriptions
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(descriptions)
+
+    # Example query
+    query = ["Design considerations for urban transport and pedestrian-friendly spaces."]
+    query_tfidf = vectorizer.transform(query)
+
+    # Calculate similarity
+    similarity_scores = cosine_similarity(query_tfidf, tfidf_matrix)
+
+    # Find the most similar course
+    most_similar_course_index = np.argmax(similarity_scores)
+    most_similar_course = courses[most_similar_course_index]
+
+    print("Most similar course based on description:", most_similar_course[0], "-", most_similar_course[1])
+    return {"data": most_similar_course[0] + "-" + most_similar_course[1]} 
+
+def get_course_contents(course_link, session):
+    vars = {'SubmitName': 'Submit', 'SaFormName': 'action_index__Findex_html'}
+    course_response = session.post(course_link, data=vars)
+    manage_cookies(session, save=True)
+
+    # Load HTML and parse
+    soup = BeautifulSoup(course_response.content, 'html.parser')
+    h3_tags = soup.find_all('h3')
+
+    for h3 in h3_tags:
+        # Use .next_sibling to get the content immediately following each <h3> tag
+        following_content = h3.next_sibling
+        
+        # Since .next_sibling might return a NavigableString or another tag,
+        # we check if it's not a tag before printing
+        if following_content and not following_content.name:
+            return following_content.strip()
+
 
 def scrape_website():
     session = requests.Session()
@@ -100,39 +143,48 @@ def scrape_website():
     #url = 'https://oibs2.metu.edu.tr/View_Program_Course_Details_64/main.php'
     
     # Get the course names
-    course_data = get_course_names()
-    courses = course_data["tables"][2]
-
-    for course in courses:
-        print(course)
-    url = 'https://catalog.metu.edu.tr/prog_courses.php?prog=567'
-    vars = {'SubmitName': 'Submit', 'SaFormName': 'action_index__Findex_html'}
-    response = session.post(url, data=vars)
-    manage_cookies(session, save=True)
-
-    # Load HTML and parse
-    soup = BeautifulSoup(response.content, 'html.parser')
-    tables = soup.find_all("table")
-    
-    #data_table = tables[2]  # Adjust index based on your needs
+    department_data = get_course_names()
+    departments = department_data["tables"][2]
 
     all_tables_data = []
-    for table in tables:
-        table_data = []
-        rows = table.find_all('tr')
-        for row in rows:
+    for department in departments:
+        if len(department) == 3:
+            url = 'https://catalog.metu.edu.tr/prog_courses.php?prog=' + department
+            vars = {'SubmitName': 'Submit', 'SaFormName': 'action_index__Findex_html'}
+            response = session.post(url, data=vars)
+            manage_cookies(session, save=True)
+
+            # Load HTML and parse
+            soup = BeautifulSoup(response.content, 'html.parser')
+            tables = soup.find_all("table")
+
             
-            row_data = [cell.get_text(strip=True) for cell in row.find_all(['td'])]
-            #print("row", row_data)
-            table_data.append(row_data)
-        all_tables_data.append(table_data)
+            for table in tables:
+                table_data = []
+                rows = table.find_all('tr')
+                for row in rows:
+                    row_data = [cell.get_text(strip=True) for cell in row.find_all(['td'])]
+                    #print("row", row_data)
+                    course_name = row_data[0]
+                    course_code = department + '0'
+                    course_link = "https://catalog.metu.edu.tr/"
+                    a_tag = row.find('a')
+                    if a_tag:
+                        # Extract the href attribute
+                        course_link = course_link + a_tag.get('href')
 
-    # Write to a JSON file
-    with open('course_data.json', 'w', encoding='utf-8') as f:
-        json.dump(all_tables_data, f, ensure_ascii=False, indent=4)
+                    
+                    course_contents = get_course_contents(course_link, session)
+                    
+                    row_data.append(course_contents)
 
-    #print(response)
+                    table_data.append(row_data)
+                all_tables_data.append(table_data)
+                #all_tables_data.append(table_data)
+                # Write to a JSON file
+                with open('course_data.json', 'w', encoding='utf-8') as f:
+                    json.dump(all_tables_data, f, ensure_ascii=False, indent=4)
+
     raw_data = response.text
-    #print(raw_data)
 
     return {"data": all_tables_data}

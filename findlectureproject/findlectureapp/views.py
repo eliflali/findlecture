@@ -5,6 +5,7 @@ from .scraping import scrape_website
 # scraper/views.py
 from django.http import JsonResponse
 from .scraping import scrape_website
+from .scraping import similar_course_finder
 from .scraping import remove_cookies, python_request_with_vars
 import requests
 from bs4 import BeautifulSoup
@@ -110,6 +111,13 @@ def scrape_courses(request):
 
 def scrape_view(request):
     data = scrape_website()
+    #print("data", data)
+    #print(data)
+    tables = data
+    return render(request, 'template.html', tables)
+
+def similar_courses(request):
+    data = similar_course_finder()
     #print("data", data)
     #print(data)
     tables = data
