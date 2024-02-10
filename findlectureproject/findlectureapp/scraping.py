@@ -9,44 +9,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from .models import Course  # Adjust the import path as necessary
 
-# Function to remove cookies
-def remove_cookies():
-    # The following lines attempt to delete the cookies file if it exists
-    # This is an approximation of the PHP version's file_put_contents("/tmp/cok", "");
-    # Please note that Python's requests library handles cookies differently, and this may not be necessary
-    cookies_file = "/tmp/cok"
-    if os.path.exists(cookies_file):
-        os.remove(cookies_file)
-
-    pom_file = "/tmp/pom"
-    if os.path.exists(pom_file):
-        os.remove(pom_file)
-
-# Function that emulates the curl_url_with_vars function in PHP
-def python_request_with_vars(url, vars, persistent=False, session=None):
-    if not persistent or session is None:
-        session = requests.Session()
-        # requests handles cookies automatically; there's no need for a cookie jar file
-        session.verify = False  # Similar to CURLOPT_SSL_VERIFYPEER in PHP
-
-    response = session.post(url, data=vars)
-
-    if not persistent:
-        session.close()
-
-    return response.text
-
-def parse_courses(raw_html):
-    soup = BeautifulSoup(raw_html, 'html.parser')
-    # Use BeautifulSoup to find the courses in the HTML
-    # This is a placeholder: you'll need to tailor this to the actual structure of the HTML
-    courses = []
-    for course_html in soup.find_all('table'):
-        # Extract the relevant information from each course element
-        # e.g., course_name = course_html.find('some_inner_selector').text
-        courses.append(course_name)
-    return courses
-
 # Function to handle cookie management
 def manage_cookies(session, save=True):
     if save:
@@ -88,33 +50,6 @@ def get_course_names():
         all_tables_data.append(table_data)
 
     return {"tables": all_tables_data}
-
-def similar_course_finder():
-    courses = [
-    ["CRP454", "URBAN TRANSPORT SYSTEMS: PLANNING AND DESIGN", "3", "3", "0", "5.0", "Planning and design of transport networks, modes, systems, stations. Network and urban form considerations. Route and capacity planning for public transport systems. Planning pedestrian circulation, principles of city center pedestrianisation. New Urbanism movement and planning for pedestrian-oriented and transit-oriented neighbourhoods. Principles of traffic calming. Design considerations for planning car parks, road junctions, stations, and interchange facilities."]
-    # Add more courses as needed
-    ]
-
-    # Extract descriptions
-    descriptions = [course[-1] for course in courses]
-
-    # Vectorize descriptions
-    vectorizer = TfidfVectorizer()
-    tfidf_matrix = vectorizer.fit_transform(descriptions)
-
-    # Example query
-    query = ["Design considerations for urban transport and pedestrian-friendly spaces."]
-    query_tfidf = vectorizer.transform(query)
-
-    # Calculate similarity
-    similarity_scores = cosine_similarity(query_tfidf, tfidf_matrix)
-
-    # Find the most similar course
-    most_similar_course_index = np.argmax(similarity_scores)
-    most_similar_course = courses[most_similar_course_index]
-
-    print("Most similar course based on description:", most_similar_course[0], "-", most_similar_course[1])
-    return {"data": most_similar_course[0] + "-" + most_similar_course[1]} 
 
 def get_course_contents(course_link, session):
     vars = {'SubmitName': 'Submit', 'SaFormName': 'action_index__Findex_html'}

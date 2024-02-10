@@ -3,21 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scraped Tables</title>
+    <title>Successfully Updated</title>
 </head>
 <body>
-    <h1>Scraped Tables</h1>
-    {% for table in tables %}
-        <h2>Table {{ forloop.counter }}</h2>
-        <table border="1">
-            {% for row in table %}
-                <tr>
-                    {% for cell in row %}
-                        <td>{{ cell }}</td>
-                    {% endfor %}
-                </tr>
-            {% endfor %}
-        </table>
-    {% endfor %}
 </body>
 </html>
